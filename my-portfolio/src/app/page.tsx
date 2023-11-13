@@ -1,6 +1,8 @@
 import { Voces } from 'next/font/google'
 import Image from 'next/image'
-import Voice from './voice/page'
+import Voice from './voice/page';
+import { navMenu } from './ui/navMenu';
+
 
 export default function Home() {
   return (
@@ -32,60 +34,13 @@ export default function Home() {
             </div>
             <nav className='nav hidden lg:block mx-20'>
               <ul className='mt-16 w-max'>
-                <li>
-                  <a className='group flex items-center py-3 active' href='#about'>
+                {navMenu.map(el => <li key={el.ref}><a className='group flex items-center py-3 active' href={el.ref}>
                     <span className='nav-indicator mr-4 h-px w-8 bg-slate-400 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
                     </span>
                     <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'>
-                      ABOUT
+                      {el.name}
                     </span>
-                  </a>
-                </li>
-                <li>
-                <a className='group flex items-center py-3 active' href='#skills'>
-                    <span className='nav-indicator mr-4 h-px w-8 bg-slate-400 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
-                    </span>
-                    <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'>
-                      SKILLS
-                    </span>
-                  </a>
-                </li>
-                <li>
-                <a className='group flex items-center py-3 active' href='#projects'>
-                    <span className='nav-indicator mr-4 h-px w-8 bg-slate-400 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
-                    </span>
-                    <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'>
-                      PROJECTS
-                    </span>
-                  </a>
-                </li>
-                <li>
-                <a className='group flex items-center py-3 active' href='#education'>
-                    <span className='nav-indicator mr-4 h-px w-8 bg-slate-400 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
-                    </span>
-                    <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'>
-                      EDUCATION AND EXPERIENCE
-                    </span>
-                  </a>
-                </li>
-                <li>
-                <a className='group flex items-center py-3 active' href='#voice'>
-                    <span className='nav-indicator mr-4 h-px w-8 bg-slate-400 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
-                    </span>
-                    <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'>
-                      TEAMMATE&apos;S VOICE
-                    </span>
-                  </a>
-                </li>
-                <li>
-                <a className='group flex items-center py-3 active' href='#contact'>
-                    <span className='nav-indicator mr-4 h-px w-8 bg-slate-400 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
-                    </span>
-                    <span className='nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200'>
-                      CONTACT
-                    </span>
-                  </a>
-                </li>
+                  </a></li>)}
               </ul>
             </nav>
         </aside>
