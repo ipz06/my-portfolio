@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Voice from './voice/page';
 import { navMenu } from './ui/navMenu';
 import {AiFillGithub, AiFillGitlab, AiFillLinkedin} from 'react-icons/ai'
-import About from '@/about/page';
+import About from '@/app/about/page';
+import Skills from '@/app/skills/page';
+import Education from './education/page';
 
 
 export default function Home() {
@@ -52,6 +54,8 @@ export default function Home() {
             <button>say hello</button>
           </div>
           <About />
+          <Skills />
+          <Education />
           <Voice/>
         </main>
       </div>
