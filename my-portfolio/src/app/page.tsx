@@ -6,6 +6,8 @@ import {AiFillGithub, AiFillGitlab, AiFillLinkedin} from 'react-icons/ai'
 import About from '@/app/about/page';
 import Skills from '@/app/skills/page';
 import Education from './education/page';
+import Contact from './contact/page';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -51,12 +53,18 @@ export default function Home() {
         <main className="flex flex-col py-5 px-20 bg-slate-900 w-full">
           <div id='extra' className='flex flex-row justify-start gap-10 px-20 py-10'>
             <button>Dark/Light Mode</button>
-            <button>say hello</button>
+            <Link 
+            href='/sayHello'
+            className='text-slate-100'
+            >
+              <p>Say Hello</p>
+            </Link>
           </div>
           <About />
           <Skills />
           <Education />
           <Voice/>
+          <Contact />
         </main>
       </div>
     </div>
