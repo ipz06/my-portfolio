@@ -10,7 +10,7 @@ export const feedback: Feedback[] = [
         id: 'mate00',
         name: 'Vladislav Pantaleev',
         text: '"Vanya consistently exhibits a high level of proficiency with JavaScript programming. She contributes thoughtful ideas to group discussions and works well with our team to find solutions to problems. She is an invaluable asset to any project she is a part of because of her commitment and attention to detail. She will undoubtedly keep doing well in programming and exert significant influence in the industry."',
-        mate: 'Alpha JS Track, Buddy Group'    
+        mate: '/Telerik Academy, Alpha JS Track, Buddy Group'    
     },
     {
         id: 'mate01',

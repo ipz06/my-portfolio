@@ -9,8 +9,8 @@ export const navMenu: NavMenu[] = [
         ref: '#about'
     },
     {
-        name:  'SKILLS',
-        ref: '#skills'
+        name:  'KNOWLEDGE',
+        ref: '#knowledge'
     },
     {
         name: 'PROJECTS',
