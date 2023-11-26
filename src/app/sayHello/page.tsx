@@ -10,14 +10,14 @@ export default function Page () {
     // }
 
     
-    async function create(formData: FormData) {
-        'use server'
+    // async function create(formData: FormData) {
+    //     'use server'
      
-        // mutate data
-        // revalidate cache
+    //     // mutate data
+    //     // revalidate cache
 
 
-      }
+    //   }
 
     return (
         <div className="flex-1 flex-col justify-center items-center px-96 ml-28 my-44">
@@ -30,7 +30,8 @@ export default function Page () {
              <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
                 Hello, Framer Motion!
             </motion.div>
-        <form action={create} method="post" className=" m-3 w-full">
+        {/* <form action={create} method="post" className=" m-3 w-full"> */}
+        <form className=" m-3 w-full"> 
             <div className="m-3">
                 <label htmlFor="name">Enter your name: </label>
                 <input type="text" name="name" placeholder='Name' className='border-2 border-r-2' required />
