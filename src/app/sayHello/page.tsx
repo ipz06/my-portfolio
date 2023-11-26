@@ -1,6 +1,5 @@
 import { SubmitButton } from "./submitButton"
-import { MdWavingHand } from "react-icons/md";
-import { motion } from "framer-motion";
+
 
 
 export default function Page () {
@@ -27,9 +26,9 @@ export default function Page () {
                 <MdWavingHand size={90} />
             </motion.div>
              */}
-             <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+             {/* <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
                 Hello, Framer Motion!
-            </motion.div>
+            </motion.div> */}
         {/* <form action={create} method="post" className=" m-3 w-full"> */}
         <form className=" m-3 w-full"> 
             <div className="m-3">
