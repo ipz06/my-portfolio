@@ -1,4 +1,5 @@
 import styles from '../ui/card.module.css'
+import Link from 'next/link'
 
 export default function Skills () {
 
@@ -31,6 +32,14 @@ export default function Skills () {
             <div className="flex flex-row flex-wrap text-[#d6d6d6]">
                 <p className={styles.smallCard}>Bulgarian</p>
                 <p className={styles.smallCard}>English</p>
+            </div>
+            <h2 className="text-xl font-bold tracking-tight text-[#d6d6d6] sm:text-lg py-5">CERTIFICATES</h2>
+            <div className="flex flex-row flex-wrap text-[#d6d6d6]">
+                <Link
+                href='https://drive.google.com/drive/folders/1eLymQubGk14iR5aaORzxIZ3lb4s1SX3q'>
+                    <div className={styles.card}><p>Alpa JS Track - Telerik Academy</p></div>
+                </Link>
+                <p className={styles.card}>React-The complete guide</p>
             </div>
         </div>
     )
