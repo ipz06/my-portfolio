@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About () {
     return (
         <div className="my-16" id='about'>
@@ -16,7 +18,7 @@ export default function About () {
             My main focus these days is building products in web development and continue learning. 
             When I am not at the computer, I am usually sporting,
             hanging out with friends, or cooking. And love doing reading 
-            challenges at my goodreads profile. 
+            challenges at my <Link href='https://www.goodreads.com/' className="hover:text-[#3BBA9C] ">goodreads</Link> profile. 
             </p>
             
         </div>
