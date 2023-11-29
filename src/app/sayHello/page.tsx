@@ -22,7 +22,7 @@ export default function Page () {
 
 
     return (
-        <div className="flex flex-col justify-center items-center max-w-4xl w-full px-10 pt-6 pb-8 shadow-sm bg-slate-100">
+        <div className="container">
             {/* <motion.div className="text-slate-800 m-10 px-40" 
             whileHover={{ scale: 1.2, rotate: 90 }}
             whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}>
@@ -33,42 +33,52 @@ export default function Page () {
                 Hello, Framer Motion!
             </motion.div> */}
         {/* <form action={create} method="post" className=" m-3 w-full"> */}
-        <div className="text-center text-4xl font-semibold bg-clip-text ">Contact me</div>
-        <form className="m-3 w-full pt-8 " onSubmit={handleSubmit(onSubmit)}> 
-            <div className="flex flex-col mx-5 mt-8 h-10 relative ">
-                <label htmlFor="name">Enter your name: </label>
-                <input 
-                type="text" 
-                placeholder='Name' 
-                className='border-b-4 bg-inherit'
-                {...register("name")} 
-                // ref={name}
-                required />
+        <div className="text ">Contact me</div>
+        <form  onSubmit={handleSubmit(onSubmit)}> 
+            <div className="form-row">
+                <div className="input-data">
+                    <input 
+                    type="text"  
+                    {...register("name")} 
+                    required />
+                    <div className="underline"></div>
+                    <label htmlFor="name">Enter your name: </label>
+                </div>
             </div>
-            <div className="flex flex-col mx-5 mt-8 h-10 relative">
-                <label htmlFor="email">Enter your email: </label>
-                <input 
-                type="email"  
-                {...register('email')}
-                // ref={email}
-                placeholder="Email" 
-                className='border-2 border-r-2' 
-                required />
+            <div className="form-row">
+                <div className="input-data">
+                    <input 
+                    type="email"  
+                    {...register('email')} 
+                    required />
+                    <div className="underline"></div>
+                    <label htmlFor="email">Enter your email: 
+                    </label>
+                </div>   
             </div>
-            <div className="flex flex-col mx-5 mt-8 h-20 relative">
-                <label htmlFor="text">Enter your message: </label>
-                <textarea 
-                id="story"
-                {...register('story')}  
-                // ref={text}
-                placeholder="Message" 
-                className='border-2 border-r-2' 
-                required />
+            <div className="form-row">
+                <div className="input-data textarea">  
+                    <textarea 
+                    id="story"
+                    {...register('story')}  
+                    rows={8}
+                    cols={80}
+                     required>
+                    </textarea> 
+                    <br />
+                    <div className="underline"></div>
+                    <label htmlFor="text">Write your message: </label>
+                    <br />
+                </div>
+                
             </div>
-            <div className='flex flex-col justify-start items-start m-3 my-10' >
+            <div className='form-row submit-btn'>
+            <div className="input-data">
+                <div className="inner"></div>
                 {/* <SubmitButton onSend={handleSend}/> */}
                 {/* <button type="button" className="button" onClick={handleSend}>Send</button> */}
                 <input type='submit' value='submit'/>
+                </div>
             </div>      
         </form>
         </div>
