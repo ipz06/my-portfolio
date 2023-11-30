@@ -1,7 +1,8 @@
 'use client'
 
-import { SyntheticEvent, useRef, useState } from "react";
-import { SubmitButton } from "./submitButton"
+import ReCAPTCHA from "react-google-recaptcha"
+import { verifyCaptcha } from "../actions"
+import { useRef, useState } from "react"
 import {SubmitHandler, useForm} from 'react-hook-form';
 import { MdWavingHand } from "react-icons/md";
 import './form.css';
@@ -14,10 +15,32 @@ type FormValues = {
   
 
 export default function Page () {
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const [isVerified, setIsVerified] = useState<boolean>(false);
+
     const {register, handleSubmit} = useForm<FormValues>();
 
+    async function handleCaptchaSubmission(token: string | null) {
+        // Server function to verify captcha
+        await verifyCaptcha(token)
+          .then(() => setIsVerified(true))
+          .catch(() => setIsVerified(false))
+      };
+
+    function isValidEmail(email:string) {
+        return /\S+@\S+\.\S+/.test(email);
+    };
+
+    function isValidName(name:string){
+        return name.trim().length > 3;
+    }
+
     const onSubmit:SubmitHandler<FormValues> = (data) => {
-        alert(JSON.stringify(data));
+        if(isValidEmail(data.email) && isValidName(data.name)) {
+            alert(JSON.stringify(data));
+        }
+        else alert('Please enter a name with length more than 3 and valid email!')
+        
     }
 
 
@@ -42,7 +65,7 @@ export default function Page () {
                     {...register("name")} 
                     required />
                     <div className="underline"></div>
-                    <label htmlFor="name">Enter your name: </label>
+                    <label htmlFor="name" className="text-[#1E1F24]">Enter your name: </label>
                 </div>
             </div>
             <div className="form-row">
@@ -72,12 +95,19 @@ export default function Page () {
                 </div>
                 
             </div>
+            <div className='form-row'>
+                <div className="input-data"> 
+                    <ReCAPTCHA
+                        sitekey="6LfuzSApAAAAAOygPIS3m916ifu8qKi3yrynjrqo"
+                        ref={recaptchaRef}
+                        onChange={handleCaptchaSubmission}
+                    />
+                </div>
+            </div>
             <div className='form-row submit-btn'>
-            <div className="input-data">
+            <div className="input-data">   
                 <div className="inner"></div>
-                {/* <SubmitButton onSend={handleSend}/> */}
-                {/* <button type="button" className="button" onClick={handleSend}>Send</button> */}
-                <input type='submit' value='submit'/>
+                <input type='submit' value='submit' />
                 </div>
             </div>      
         </form>
