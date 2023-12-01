@@ -3,8 +3,11 @@ import style from '../ui/card.module.css'
 export default function Education () {
 
     return (
-        <div className='flex flex-col py-10' id='education'>
-            <h1 className="text-3xl font-bold tracking-tight text-[#3BBA9C] py-10">EDUCATION</h1>
+        <section className='mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24' id='education'>
+            <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0'>
+                <h2 className='text-[#3BBA9C] text-lg font-bold tracking-widest lg:sr-only'>EDUCATION</h2>
+            </div>
+            <h1 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:pb-5 sr-only sm:not-sr-only">EDUCATION</h1>
             <div className={style.card}>
                 <h3 className="font-bold text-[#d6d6d6] py-1">Alpha JavaScript Track</h3>
                 <div className='flex flex-row justify-between text-[#d6d6d6]'>
@@ -26,7 +29,12 @@ export default function Education () {
                 <span className='italic'>09.2008 - 05.2013</span>
                 </div>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-[#3BBA9C] py-10">EXPERIENCE</h2>
+            
+            <div>
+                <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0'>
+                    <h2 className='text-[#3BBA9C] text-lg font-bold tracking-widest lg:sr-only'>EXPERIENCE</h2>
+                </div>
+            <h2 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:py-5 sr-only sm:not-sr-only">EXPERIENCE</h2>
             <div className={style.card}>
                 <h3 className="font-bold text-[#d6d6d6] py-1">Frontend Developer</h3>
                 <div className='flex flex-row justify-between text-[#d6d6d6] py-1'>
@@ -62,6 +70,8 @@ export default function Education () {
                     <li>- Prepared presentation materials for clients - drawings and visualizations</li>
                 </ul>
             </div>
-        </div>
+            </div>
+            
+        </section>
     )
 };

@@ -10,34 +10,40 @@ import Contact from './contact/page';
 import Link from 'next/link';
 import Projects from './projects/page';
 import { TbTicTac } from "react-icons/tb";
+import { BiMessageDetail } from "react-icons/bi";
+
 
 
 export default function Home() {
 
   return (
-    <div className='flex w-full '>
-      <div className='flex flex-row gap-4 justify-between w-full min-h-screen bg-[#1E1F24]'>
-        <header className='flex flex-col w-full'>
-        <aside className='lg:sticky lg:top-0 lg:flex lg:flex-col lg:py-5 lg:px-20 lg:w-full bg-[#1E1F24]'>
-          <div className='flex flex-col justify-center px-20'>
+    <div className='flex w-full font-sans min-h-screen mx-auto max-w-screen-xl bg-[#1E1F24] px-6 md:px-12 lg:px-24 lg:py-0 md:py-10'>
+      <div className='lg:flex lg:justify-between lg:gap-4'>
+        <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between lg:w-1/2 lg:py-12'>
+        <aside>
+          <div className=''>
             <Image 
             className='py-10'
             src='/profile.JPG'
             width={200}
             height={100}
+            objectFit='cover'
             alt='Profile image'/>
     
-            <h1 className="text-4xl font-bold tracking-tight text-[#707070] sm:text-5xl py-1">
-              <span><a>Ivanka Zlateva</a></span>
+            <h1 className="font-bold tracking-normal text-[#707070] text-4xl sm:text-5xl">
+              <a href='/'>Ivanka Zlateva</a>
             </h1>
-            <span>
-              <h2 className="text-lg font-medium tracking-tight text-[#3BBA9C] sm:text-xl py-1">
-                  Front End Developer<span className="text-lg font-medium tracking-tight text-[#707070] sm:text-xl py-1"> | Architect</span>
-              </h2>
+          
+            <h2 className="mt-3 text-lg font-medium tracking-normal text-[#3BBA9C] sm:text-xl">
+                Front End Developer<span className="text-lg font-medium tracking-tight text-[#707070] sm:text-xl"> | Architect</span>
+            </h2>
               
-            </span>
             
-            <span className='flex flex-row justify-start justify-items-center items-center my-2 gap-5 py-1 text-[#707070]'>
+            
+            <ul 
+            className='flex flex-row items-center my-2 gap-5 py-1 text-[#707070]'
+            aria-label='Social media'
+            >
               <Link href='https://github.com/ipz06' className='hover:text-slate-200'>
                 <AiFillGithub size={20} />
               </Link>
@@ -53,9 +59,9 @@ export default function Home() {
                 <h1 className='font-bold text-l hover:text-slate-200'>CV</h1>
               </Link> 
               
-            </span>
+            </ul>
             </div>
-            <nav className='nav hidden lg:block mx-20'>
+            <nav className='nav hidden lg:block'>
               <ul className='my-5 w-max'>
                 {navMenu.map(el => <li key={el.ref}><a className='group flex items-center py-3 active' href={el.ref}>
                     <span className='nav-indicator mr-4 h-px w-8 bg-[#707070] transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none' >
@@ -63,25 +69,25 @@ export default function Home() {
                     <span className='nav-text text-xs font-bold uppercase tracking-widest text-[#707070] group-hover:text-slate-200 group-focus-visible:text-slate-200'>
                       {el.name}
                     </span>
-                  </a></li>)}
+                  </a></li>
+                )}
               </ul>
             </nav>
         </aside>
         </header>
-        <main className="flex flex-col py-5 px-20 bg-[#1E1F24] w-full">
-          <div id='extra' className='flex flex-row justify-start gap-10 px-20 py-10 text-[#707070] hover:text-[#3BBA9C]'>
+        <main className="pt-24 lg:w-1/2  bg-[#1E1F24] lg:py-20">
+          <div id='extra' className='flex flex-row lg:justify-center sm:justify-start gap-10 lg:px-20 pb-10 text-[#707070]'>
             {/* <button>Dark/Light Mode</button> */}
             <Link
             href='https://tic-tac-toe-rho.vercel.app/'
-            className='hover:animate-spin'>
+            className='hover:animate-spin  hover:text-[#3BBA9C]'>
               <TbTicTac size={30}/>
-            </Link>
-            
+            </Link>  
             <Link 
             href='/sayHello'
-            className='text-slate-100'
+            className=' hover:text-[#3BBA9C]'
             >
-              <p>Say Hello</p>
+              <BiMessageDetail size={30}/>
             </Link>
           </div>
           <About />

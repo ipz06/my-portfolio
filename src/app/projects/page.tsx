@@ -11,11 +11,17 @@ export default function Projects () {
     const [isProjectHovered, setIsProjectHovered] = useState(false)
 
     return (
-        <div id='projects'>
-            <h1 className="text-3xl font-bold tracking-tight text-[#3BBA9C] py-5">PROJECTS</h1>
+        <section id='projects' className='mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24'>
+            <div className='sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0'>
+                <h2 className='text-[#3BBA9C] text-lg font-bold tracking-widest lg:sr-only'>PROJECTS</h2>
+            </div>
+            <h1 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:pb-5 sr-only sm:not-sr-only">PROJECTS</h1>
             <Link
-            href='https://gitlab.com/ipz06/learningtasks'>
-                <div className={style.card} onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}>
+            href='https://gitlab.com/ipz06/learningtasks'
+            onMouseEnter={() => setIsProjectHovered(true)} 
+            onMouseLeave={() => setIsProjectHovered(false)}
+            >
+                <div className={style.card} >
                     <div className='flex flex-row gap-2 items-center'>
                         <h3 className="font-bold text-[#d6d6d6] py-1">Learning Course</h3>
                         <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
@@ -212,6 +218,6 @@ export default function Projects () {
             </div>
            
             
-        </div>
+        </section>
     )
 };
