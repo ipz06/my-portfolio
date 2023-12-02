@@ -21,8 +21,8 @@ export const navMenu: NavMenu[] = [
         ref: '#education'
     },
     {
-        name: 'TEAMMATE`S VOICE' ,
-        ref: '#voice'
+        name: 'TESTIMONIALS' ,
+        ref: '#testimonials'
     },
     {
         name: 'CONTACT' ,
