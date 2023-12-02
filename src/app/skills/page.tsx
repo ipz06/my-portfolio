@@ -36,8 +36,7 @@ export default function Skills () {
                 data-tooltip-place="left"
                 >
                     <Tooltip id="my-tooltip-prec" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
-
-                    Precision
+                    <span>Precision</span>
                 </p>
                 <p 
                 className={styles.smallCard}
@@ -46,7 +45,7 @@ export default function Skills () {
                 data-tooltip-place="top"
                 >
                     <Tooltip id="my-tooltip-org" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
-                    Organization
+                    <span>Organization</span>
                 </p>
                 <p 
                 className={styles.smallCard}
@@ -55,7 +54,7 @@ export default function Skills () {
                 data-tooltip-place="top"
                 >
                     <Tooltip id="my-tooltip-motivation" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
-                    Motivation
+                    <span>Motivation</span>
                 </p>
             </div>
             <h2 className="lg:text-xl font-bold tracking-tight text-[#d6d6d6] sm:text-xs lg:py-5 sm:py-5">LANGUAGES</h2>
