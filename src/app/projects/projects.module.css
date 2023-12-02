@@ -1,0 +1,37 @@
+.example {
+    /* border-radius: 4px; */
+    /* background: linear-gradient(to right, #67b26b, #4ca2cb) !important; */
+    border: none;
+    color: #FFFFFF;
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-size: 20px;
+    /* padding: 20px; */
+    /* width: 100px; */
+    transition: all 0.4s;
+    cursor: pointer;
+    /* margin: 5px; */
+    font-style: bold;
+  }
+
+  .example h3 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .example h3:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .example:hover h3 {
+    padding-right: 25px;
+  }
+  .example:hover h3:after {
+    opacity: 1;
+    right: 0;
+  }

@@ -3,7 +3,7 @@ import style from '../ui/card.module.css';
 import Link from 'next/link';
 // import Image from 'next/image';
 import { MdOutlineArrowOutward } from "react-icons/md";
-
+import styles from './projects.module.css'
 import { useState } from 'react';
 
 export default function Projects () {
@@ -17,19 +17,11 @@ export default function Projects () {
             </div>
             <h1 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:pb-5 sr-only sm:not-sr-only">PROJECTS</h1>
             <Link
-            href='https://gitlab.com/ipz06/learningtasks'
-            onMouseEnter={() => setIsProjectHovered(true)} 
-            onMouseLeave={() => setIsProjectHovered(false)}
+            href='https://gitlab.com/ipz06/learningtasks'         
             >
                 <div className={style.card} >
-                    <div className='flex flex-row gap-2 items-center'>
+                    <div className={styles.example}>
                         <h3 className="font-bold text-[#d6d6d6] py-1">Learning Course</h3>
-                        <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
-                            <MdOutlineArrowOutward 
-                            size={isProjectHovered ? 20 : 10}
-                            alt="Pointer for link"
-                            />
-                        </p> 
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Personal Project </span >
@@ -52,15 +44,9 @@ export default function Projects () {
             </Link>
             <Link
             href='https://gitlab.com/ipz06/greet-task'>
-                <div className={style.card} onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}>
-                    <div className='flex flex-row gap-2 items-center'>
+                <div className={style.card}>
+                    <div className={styles.example}>
                         <h3 className="font-bold text-[#d6d6d6] py-1">Greet API Task</h3>
-                        <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
-                            <MdOutlineArrowOutward 
-                            size={isProjectHovered ? 20 : 10}
-                            alt="Pointer for link"
-                            />
-                        </p> 
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Personal Project </span >
@@ -78,15 +64,9 @@ export default function Projects () {
             </Link>
             <Link
             href='https://tic-tac-toe-rho.vercel.app/'>
-                <div className={style.card} onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}>
-                    <div className='flex flex-row gap-2 items-center'>
-                        <h3 className="font-bold text-[#d6d6d6] py-1">Tic-Tac-Toe</h3>
-                        <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
-                            <MdOutlineArrowOutward  
-                            size={isProjectHovered ? 20 : 10}
-                            alt="Pointer for link"
-                            />
-                        </p>    
+                <div className={style.card} >
+                    <div className={styles.example}>
+                        <h3 className="font-bold text-[#d6d6d6] py-1">Tic-Tac-Toe</h3>      
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Personal Project </span >
@@ -104,15 +84,9 @@ export default function Projects () {
             </Link>
             <Link
             href='https://gitlab.com/ipz06/food-order-app'>
-                <div className={style.card} onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}>
-                    <div className='flex flex-row gap-2 items-center'>
-                        <h3 className="font-bold text-[#d6d6d6] py-1">Food-order-app</h3>
-                        <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
-                            <MdOutlineArrowOutward
-                            size={isProjectHovered ? 20 : 10}
-                            alt="Pointer for link"
-                            />
-                        </p>   
+                <div className={style.card} >
+                    <div className={styles.example}>
+                        <h3 className="font-bold text-[#d6d6d6] py-1">Food-order-app</h3>     
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Personal Project </span >
@@ -129,15 +103,9 @@ export default function Projects () {
             </Link>
             <Link
             href='https://gitlab.com/ipz06/game-hub'>
-                <div className={style.card} onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}>
-                    <div className='flex flex-row gap-2 items-center'>
-                        <h3 className="font-bold text-[#d6d6d6] py-1">GAME-HUB</h3>
-                        <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
-                            <MdOutlineArrowOutward
-                            size={isProjectHovered ? 20 : 10}
-                            alt="Pointer for link"
-                            />
-                        </p>    
+                <div className={style.card} >
+                    <div className={styles.example}>
+                        <h3 className="font-bold text-[#d6d6d6] py-1">GAME-HUB</h3>    
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Personal Project </span >
@@ -154,15 +122,9 @@ export default function Projects () {
             </Link>
             <Link
             href='https://gitlab.com/ipz06/fitness-tracking-app'>
-                <div className={style.card} onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}>
-                    <div className='flex flex-row gap-2 items-center'>
-                        <h3 className="font-bold text-[#d6d6d6] py-1">7FIT</h3>
-                        <p className="font-bold text-[#d6d6d6] py-1" onMouseEnter={() => setIsProjectHovered(true)} onMouseLeave={() => setIsProjectHovered(false)}> 
-                            <MdOutlineArrowOutward      
-                            size={isProjectHovered ? 20 : 10}
-                            alt="Pointer for link"
-                            />
-                        </p>    
+                <div className={style.card} >
+                    <div className={styles.example}>
+                        <h3 className="font-bold text-[#d6d6d6] py-1">7FIT</h3>    
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Telerik Academy </span >
@@ -183,7 +145,7 @@ export default function Projects () {
             </Link>
             <div className={style.card}>
                 <div className='flex flex-row gap-2 items-center'>
-                    <h3 className="font-bold text-[#d6d6d6] py-1">ASK.me</h3>    
+                    <h3 className="font-bold text-[#d6d6d6] py-1 text-xl">ASK.me</h3>    
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Telerik Academy </span >
@@ -203,7 +165,7 @@ export default function Projects () {
             </div>
             <div className={style.card}>
                 <div className='flex flex-row gap-2 items-center'>
-                            <h3 className="font-bold text-[#d6d6d6] py-1">Giphy</h3>    
+                            <h3 className="font-bold text-[#d6d6d6] py-1 text-xl">Giphy</h3>    
                         </div>
                         <div className='flex flex-row justify-between text-[#d6d6d6]'>
                             <span>Telerik Academy </span >
