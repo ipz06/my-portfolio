@@ -1,3 +1,4 @@
+'use client'
 import { Voces } from 'next/font/google'
 import Image from 'next/image'
 import Voice from './voice/page';
@@ -11,10 +12,24 @@ import Link from 'next/link';
 import Projects from './projects/page';
 import { TbTicTac } from "react-icons/tb";
 import { BiMessageDetail } from "react-icons/bi";
+import { useState } from 'react';
+import 'react-tooltip/dist/react-tooltip.css';
+
+import { Tooltip } from 'react-tooltip';
+
 
 
 
 export default function Home() {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
 
   return (
     <div className='flex w-full font-sans min-h-screen mx-auto max-w-screen-xl bg-[#1E1F24] px-6 md:px-12 lg:px-24 lg:py-0 md:py-10'>
@@ -37,8 +52,6 @@ export default function Home() {
             <h2 className="mt-3 text-lg font-medium tracking-normal text-[#3BBA9C] sm:text-xl">
                 Front End Developer<span className="text-lg font-medium tracking-tight text-[#707070] sm:text-xl"> | Architect</span>
             </h2>
-              
-            
             
             <ul 
             className='flex flex-row items-center my-2 gap-5 py-1 text-[#707070]'
@@ -82,13 +95,21 @@ export default function Home() {
             href='https://tic-tac-toe-rho.vercel.app/'
             className='hover:animate-spin  hover:text-[#3BBA9C]'>
               <TbTicTac size={30}/>
-            </Link>  
-            <Link 
-            href='/sayHello'
-            className=' hover:text-[#3BBA9C]'
-            >
-              <BiMessageDetail size={30}/>
-            </Link>
+            </Link> 
+            <span >
+              <Link 
+              href='/sayHello'
+              className=' hover:text-[#3BBA9C] z-0 relative hover:after:absolute hover:after:top-0' 
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Write me anything!"
+              data-tooltip-place="top"
+              >
+                <Tooltip id="my-tooltip" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
+                <BiMessageDetail size={30}/>
+              </Link>
+            </span> 
+            
+           
           </div>
           <About />
           <Skills />

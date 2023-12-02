@@ -1,5 +1,7 @@
 import styles from '../ui/card.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
+import { Tooltip } from 'react-tooltip'
 
 export default function Skills () {
 
@@ -27,9 +29,34 @@ export default function Skills () {
             </div>
             <h2 className="lg:text-xl font-bold tracking-tight text-[#d6d6d6] sm:text-xs lg:py-5 sm:py-5">STRENGTH</h2>
             <div className="flex flex-row flex-wrap text-[#d6d6d6]">
-                <p className={styles.smallCard}>Precision</p>
-                <p className={styles.smallCard}>Organization</p>
-                <p className={styles.smallCard}>Motivation</p>
+                <p 
+                className={styles.smallCard} 
+                data-tooltip-id="my-tooltip-prec"
+                data-tooltip-content="The details catch my eye"
+                data-tooltip-place="left"
+                >
+                    <Tooltip id="my-tooltip-prec" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
+
+                    Precision
+                </p>
+                <p 
+                className={styles.smallCard}
+                data-tooltip-id="my-tooltip-org"
+                data-tooltip-html="I strive to prioritize my tasks <br />to get the job done on time"
+                data-tooltip-place="top"
+                >
+                    <Tooltip id="my-tooltip-org" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
+                    Organization
+                </p>
+                <p 
+                className={styles.smallCard}
+                data-tooltip-id="my-tooltip-motivation"
+                data-tooltip-html="I'm not afraid to try new things <br />with a view to improving myself <br />in the future and looking for<br /> the best solution"
+                data-tooltip-place="top"
+                >
+                    <Tooltip id="my-tooltip-motivation" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
+                    Motivation
+                </p>
             </div>
             <h2 className="lg:text-xl font-bold tracking-tight text-[#d6d6d6] sm:text-xs lg:py-5 sm:py-5">LANGUAGES</h2>
             <div className="flex flex-row flex-wrap text-[#d6d6d6]">
@@ -40,9 +67,21 @@ export default function Skills () {
             <div className="flex flex-col text-[#d6d6d6] ">
                 <Link
                 href='https://drive.google.com/drive/folders/1eLymQubGk14iR5aaORzxIZ3lb4s1SX3q'>
-                    <div className={styles.card}><p>Alpa JS Track - Telerik Academy</p></div>
+                    <div className={styles.base}>
+                            <Image 
+                            src='/c-1.png'
+                            alt='Certificate-01'
+                            width={500}
+                            height={200} 
+                            objectFit='cover'
+                            className='hover:scale-105 transition duration-500 cursor-pointer filter grayscale'
+                            />
+                            <p className='mt-5'>Alpha JS Track - Telerik Academy</p>
+                        
+                        
+                    </div>
                 </Link>
-                <p className={styles.card}>React-The complete guide</p>
+                <p className={styles.base}>React-The complete guide</p>
             </div>
         </section>
     )

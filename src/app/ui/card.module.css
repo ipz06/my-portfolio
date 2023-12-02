@@ -9,7 +9,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     color: #d6d6d6;
-    
+    cursor: pointer;
 
     border-radius: 5px;
 }
@@ -32,9 +32,7 @@
     background-color: #1E1F24;
   }
   
-  .card:hover::after {
-    
-  }
+
 /* #img:hover{
     color: #3BBA9C;
 } */
@@ -57,13 +55,35 @@
     background-color: rgb(43, 43, 43);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-
+    color: #707070;
     border-radius: 5px;
+    cursor: pointer;
 
 }
 
 .smallCard:hover {
     /* box-shadow: 0 8px 16px 0 rgba(97, 97, 97, 0.2); */
     background-color: #1E1F24;
-
+    color: #d6d6d6;
   }
+
+.base{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  margin-bottom: 5px;
+  padding: 20px;
+  width: 100%;   
+  background-color: rgb(43, 43, 43);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color: #d6d6d6;
+  
+
+  border-radius: 5px;
+}
+
+.base:hover p{
+  color: #3BBA9C;
+}
