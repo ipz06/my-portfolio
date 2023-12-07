@@ -18,8 +18,8 @@ type FormValues = {
 
 export default function Page () {
 
-    const recaptchaRef = useRef<ReCAPTCHA>(null);
-    const [isVerified, setIsVerified] = useState<boolean>(false);
+    // const recaptchaRef = useRef<ReCAPTCHA>(null);
+    // const [isVerified, setIsVerified] = useState<boolean>(false);
 
     const [state, handleSubmit] = useForm("mleyqjag");
     if (state.succeeded) {
@@ -27,12 +27,12 @@ export default function Page () {
     }
     // const {register, handleSubmit} = useForm<FormValues>();
 
-    async function handleCaptchaSubmission(token: string | null) {
-        // Server function to verify captcha
-        await verifyCaptcha(token)
-          .then(() => setIsVerified(true))
-          .catch(() => setIsVerified(false))
-      };
+    // async function handleCaptchaSubmission(token: string | null) {
+    //     // Server function to verify captcha
+    //     await verifyCaptcha(token)
+    //       .then(() => setIsVerified(true))
+    //       .catch(() => setIsVerified(false))
+    //   };
 
 
 
@@ -161,7 +161,7 @@ export default function Page () {
                 </div>
                 
             </div>
-            <div className='form-row'>
+            {/* <div className='form-row'>
                 <div className="input-data"> 
                     <ReCAPTCHA
                         sitekey="6LfuzSApAAAAAOygPIS3m916ifu8qKi3yrynjrqo"
@@ -169,7 +169,7 @@ export default function Page () {
                         onChange={handleCaptchaSubmission}
                     />
                 </div>
-            </div>
+            </div> */}
             <div className='form-row submit-btn'>
             <div className="input-data">   
                 <div className="inner"></div>
