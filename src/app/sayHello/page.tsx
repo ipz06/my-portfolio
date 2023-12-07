@@ -3,9 +3,11 @@
 import ReCAPTCHA from "react-google-recaptcha"
 import { verifyCaptcha } from "../actions"
 import { useRef, useState } from "react"
-import {SubmitHandler, useForm} from 'react-hook-form';
-import { MdWavingHand } from "react-icons/md";
+// import {SubmitHandler, useForm} from 'react-hook-form';
+// import { MdWavingHand } from "react-icons/md";
 import './form.css';
+import useInput from '../hooks/use-input';
+import { useForm, ValidationError } from '@formspree/react';
 
 type FormValues = {
     name: string,
@@ -15,10 +17,15 @@ type FormValues = {
   
 
 export default function Page () {
+
     const recaptchaRef = useRef<ReCAPTCHA>(null);
     const [isVerified, setIsVerified] = useState<boolean>(false);
 
-    const {register, handleSubmit} = useForm<FormValues>();
+    const [state, handleSubmit] = useForm("mnqkepgk");
+    if (state.succeeded) {
+        return <p className="text-slate-200">Thanks for joining!</p>;
+    }
+    // const {register, handleSubmit} = useForm<FormValues>();
 
     async function handleCaptchaSubmission(token: string | null) {
         // Server function to verify captcha
@@ -27,67 +34,126 @@ export default function Page () {
           .catch(() => setIsVerified(false))
       };
 
-    function isValidEmail(email:string) {
-        return /\S+@\S+\.\S+/.test(email);
-    };
 
-    function isValidName(name:string){
-        return name.trim().length > 3;
-    }
 
-    const onSubmit:SubmitHandler<FormValues> = (data) => {
-        if(isValidEmail(data.email) && isValidName(data.name)) {
-            alert(JSON.stringify(data));
-        }
-        else alert('Please enter a name with length more than 3 and valid email!')
-        
-    }
+    // const {
+    //     value: enteredName,
+    //     isValid: nameIsValid,
+    //     hasError: nameHasError,
+    //     valueChangeHandler: nameChangeHandler,
+    //     inputBlurHandler: nameBlurHandler,
+    //     reset: nameReset,
+    //   } = useInput((value:string):boolean => value.trim() !== '');
 
+    // const {
+    // value: enteredEmail,
+    // isValid: emailIsValid,
+    // hasError: emailHasError,
+    // valueChangeHandler: emailChangeHandler,
+    // inputBlurHandler: emailBlurHandler,
+    // reset: emailReset,
+    // } = useInput((value:string):boolean => {
+    //     if (value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }   
+    // });
+
+    // const {
+    //     value: enteredStory,
+    //     isValid: storyIsValid,
+    //     hasError: storyHasError,
+    //     areaChangeHandler: areaChangeHandler,
+    //     // inputBlurHandler: storyBlurHandler,
+    //     reset: storyReset,
+    //   } = useInput((value:string):boolean => value.trim() !== '');
+    
+
+//     let formIsValid;
+//   if (nameIsValid  && emailIsValid && storyIsValid) {
+//     formIsValid = true;
+//   }
+//   const onSubmit = (event: React.FormEvent): void =>{ 
+//     event.preventDefault();
+//     // alert(JSON.stringify(data));
+//     console.log('name:' + enteredName);
+//     console.log('email: ' + enteredEmail);
+//     console.log('story: ' + enteredStory)
+
+//     nameReset();
+//     emailReset();
+//     storyReset();
+
+//   }
+
+//   const nameInputId = nameHasError ? 'invalid' : '';
+//   const emailInputId = emailHasError ? 'invalid' : '';
+//   const storyInputId = storyHasError ? 'invalid' : '';
 
     return (
         <div className="container">
-            {/* <motion.div className="text-slate-800 m-10 px-40" 
-            whileHover={{ scale: 1.2, rotate: 90 }}
-            whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}>
-                <MdWavingHand size={90} />
-            </motion.div>
-             */}
-             {/* <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-                Hello, Framer Motion!
-            </motion.div> */}
-        {/* <form action={create} method="post" className=" m-3 w-full"> */}
-        <div className="text ">Contact me</div>
-        <form  onSubmit={handleSubmit(onSubmit)}> 
+        <div className="text tracking-widest">Write me</div>
+        <form onSubmit={handleSubmit}> 
             <div className="form-row">
                 <div className="input-data">
                     <input 
                     type="text"  
-                    {...register("name")} 
+                    // {...register("name")}
+                    // onChange={nameChangeHandler}
+                    // onBlur={nameBlurHandler}
+                    // value={enteredName}
+                    id='name'
+                    name="Name" 
                     required />
                     <div className="underline"></div>
                     <label htmlFor="name" className="text-[#1E1F24]">Enter your name: </label>
+                    {/* {nameHasError && <p className="text-[#b40e0e] text-xs">Name must not be empty.</p>} */}
+                   
                 </div>
             </div>
             <div className="form-row">
-                <div className="input-data">
+                <div className="input-data" >
                     <input 
                     type="email"  
-                    {...register('email')} 
+                    id='email'
+                    name='Email'
+                    // {...register('email')}
+                    // onChange={emailChangeHandler}
+                    // onBlur={emailBlurHandler}
+                    // value={enteredEmail} 
                     required />
                     <div className="underline"></div>
                     <label htmlFor="email">Enter your email: 
                     </label>
+                    {/* {emailHasError && <p className="text-[#b40e0e] text-xs">Email must contains @ and a part following it! Please enter valid email!</p>} */}
+                    <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
+                    />
                 </div>   
             </div>
             <div className="form-row">
-                <div className="input-data textarea">  
+                <div className="input-data textarea" >  
                     <textarea 
-                    id="story"
-                    {...register('story')}  
+                    // id="story"
+                    id="message"
+                    name="message"
+                    // {...register('story')}  
                     rows={8}
                     cols={80}
-                     required>
-                    </textarea> 
+                    // onInput={areaChangeHandler}
+                    // onChange={storyChangeHandler}
+                    // onBlur={storyBlurHandler}
+                    // value={enteredStory}
+                    required>
+                    </textarea>
+                    <ValidationError 
+                        prefix="Message" 
+                        field="message"
+                        errors={state.errors}
+                    /> 
                     <br />
                     <div className="underline"></div>
                     <label htmlFor="text">Write your message: </label>
@@ -107,7 +173,7 @@ export default function Page () {
             <div className='form-row submit-btn'>
             <div className="input-data">   
                 <div className="inner"></div>
-                <input type='submit' value='submit' />
+                <input type='submit' value='submit' disabled={state.submitting} />
                 </div>
             </div>      
         </form>

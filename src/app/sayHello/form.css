@@ -49,11 +49,17 @@ form .form-row .textarea{
   color: #1E1F24;
 }
 .input-data input:focus ~ label, .textarea textarea:focus ~ label,
-.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+.input-data input:valid ~ label,.textarea textarea:valid ~ label{
   transform: translateY(-40px);
   font-size: 14px;
   color: #3BBA9C;
 }
+
+/* .input-data input:invalid ~ label{
+  transform: translateY(-40px);
+  font-size: 14px;
+  color: #b40e0e;
+} */
 .textarea textarea{
   resize: none;
   padding-top: 20px;
@@ -93,6 +99,21 @@ form .form-row .textarea{
 .textarea textarea:focus ~ .underline:before,
 .textarea textarea:valid ~ .underline:before{
   transform: scale(1);
+}
+
+#invalid input{
+  background-color: #fddddd;
+}
+
+#invalid input ~ label{
+  transform: translateY(-40px);
+  font-size: 14px;
+  color: #b40e0e;
+}
+
+.invalid input:focus {
+  /* border-color: #ff8800; */
+  background-color: #fbe8d2;
 }
 .submit-btn .input-data{
   padding-top: 10px;
