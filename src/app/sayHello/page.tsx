@@ -21,7 +21,7 @@ export default function Page () {
     const recaptchaRef = useRef<ReCAPTCHA>(null);
     const [isVerified, setIsVerified] = useState<boolean>(false);
 
-    const [state, handleSubmit] = useForm("mnqkepgk");
+    const [state, handleSubmit] = useForm("mleyqjag");
     if (state.succeeded) {
         return <p className="text-slate-200">Thanks for joining!</p>;
     }
