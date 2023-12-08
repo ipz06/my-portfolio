@@ -1,5 +1,5 @@
 'use client'
-import { Voces } from 'next/font/google'
+// import { Voces } from 'next/font/google'
 import Image from 'next/image'
 import Voice from './voice/page';
 import { navMenu } from './ui/navMenu';
@@ -12,11 +12,11 @@ import Link from 'next/link';
 import Projects from './projects/page';
 import { TbTicTac } from "react-icons/tb";
 import { BiMessageDetail } from "react-icons/bi";
-import { useState, useRef, useEffect } from 'react';
+// import { useState, useRef, useEffect } from 'react';
 import 'react-tooltip/dist/react-tooltip.css';
 
 import { Tooltip } from 'react-tooltip';
-import { useIsVisible } from './hooks/useIsVisible';
+// import { useIsVisible } from './hooks/useIsVisible';
 
 
 
