@@ -32,99 +32,99 @@ export default function Home() {
     'contact',
   ];
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    // const options = {
-    //   root: null,
-    //   threshold: [0, 0.10, 0.9] ,
-    //   rootMargin: "1px"
-    // };
+  //   // const options = {
+  //   //   root: null,
+  //   //   threshold: [0, 0.10, 0.9] ,
+  //   //   rootMargin: "1px"
+  //   // };
   
-    const observer = new IntersectionObserver(entries => {
+  //   const observer = new IntersectionObserver(entries => {
 
-      let intersectionFound = false;
+  //     let intersectionFound = false;
 
       
 
-      entries.forEach(entry => {
-        if (intersectionFound) return;
+  //     entries.forEach(entry => {
+  //       if (intersectionFound) return;
 
         
-        const currentSection = sections.find(section => entry.target.id === section);
-        const navElement = document.getElementById(`#${currentSection}-nav`);
+  //       const currentSection = sections.find(section => entry.target.id === section);
+  //       const navElement = document.getElementById(`#${currentSection}-nav`);
 
-        if (entry.isIntersecting) {
-          console.log(`nav: ${currentSection}`);
-          navElement?.classList.add(
-            'group',
-            'flex',
-            'items-center',
-            'py-3',
-            'active',
-            'nav-indicator',
-            'h-px',
-            'transition-all',
-            'group:w-16',
-            'bg-slate-200',
-            'group-visible:w-16',
-            'group-visible:bg-slate-200',
-            'nav-text',
-            'text-xs',
-            'font-bold',
-            'uppercase',
-            'tracking-widest',
-            'group:text-slate-200',
-            'group-visible:text-slate-200'
-          );
+  //       if (entry.isIntersecting) {
+  //         console.log(`nav: ${currentSection}`);
+  //         navElement?.classList.add(
+  //           'group',
+  //           'flex',
+  //           'items-center',
+  //           'py-3',
+  //           'active',
+  //           'nav-indicator',
+  //           'h-px',
+  //           'transition-all',
+  //           'group:w-16',
+  //           'bg-slate-200',
+  //           'group-visible:w-16',
+  //           'group-visible:bg-slate-200',
+  //           'nav-text',
+  //           'text-xs',
+  //           'font-bold',
+  //           'uppercase',
+  //           'tracking-widest',
+  //           'group:text-slate-200',
+  //           'group-visible:text-slate-200'
+  //         );
 
-          intersectionFound = true;
+  //         intersectionFound = true;
 
-        } else {
-          navElement?.classList.remove(
-            'group',
-            'flex',
-            'items-center',
-            'py-3',
-            'active',
-            'nav-indicator',
-            'h-px',
-            'transition-all',
-            'group:w-16',
-            'bg-slate-200',
-            'group-visible:w-16',
-            'group-visible:bg-slate-200',
-            'nav-text',
-            'text-xs',
-            'font-bold',
-            'uppercase',
-            'tracking-widest',
-            'group:text-slate-200',
-            'group-visible:text-slate-200'
-          );
-        }
-      });
-    });
+  //       } else {
+  //         navElement?.classList.remove(
+  //           'group',
+  //           'flex',
+  //           'items-center',
+  //           'py-3',
+  //           'active',
+  //           'nav-indicator',
+  //           'h-px',
+  //           'transition-all',
+  //           'group:w-16',
+  //           'bg-slate-200',
+  //           'group-visible:w-16',
+  //           'group-visible:bg-slate-200',
+  //           'nav-text',
+  //           'text-xs',
+  //           'font-bold',
+  //           'uppercase',
+  //           'tracking-widest',
+  //           'group:text-slate-200',
+  //           'group-visible:text-slate-200'
+  //         );
+  //       }
+  //     });
+  //   });
 
-    sections.forEach((sectionId) => {
-      const sectionElement = document.getElementById(sectionId);
-      if (sectionElement) {
-        observer.observe(sectionElement);
-      }
-    });
+  //   sections.forEach((sectionId) => {
+  //     const sectionElement = document.getElementById(sectionId);
+  //     if (sectionElement) {
+  //       observer.observe(sectionElement);
+  //     }
+  //   });
 
-    // Clean up the observer on component unmount
-    return () => {
-      // Unobserve each section element
-      sections.forEach((sectionId) => {
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
-          observer.unobserve(sectionElement);
-        }
-      });
+  //   // Clean up the observer on component unmount
+  //   return () => {
+  //     // Unobserve each section element
+  //     sections.forEach((sectionId) => {
+  //       const sectionElement = document.getElementById(sectionId);
+  //       if (sectionElement) {
+  //         observer.unobserve(sectionElement);
+  //       }
+  //     });
 
-      observer.disconnect();
-    };
-  }, []);
+  //     observer.disconnect();
+  //   };
+  // }, []);
 
   return (
     <div
