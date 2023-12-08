@@ -33,6 +33,12 @@ export default function Home() {
   ];
 
   useEffect(() => {
+
+    // const options = {
+    //   root: null,
+    //   threshold: [0, 0.10, 0.9] ,
+    //   rootMargin: "1px"
+    // };
   
     const observer = new IntersectionObserver(entries => {
 
@@ -99,17 +105,21 @@ export default function Home() {
       });
     });
 
-    sections.forEach(sectionId => {
-      console.log('observe', observer)
-      observer.observe(document.getElementById(sectionId));
+    sections.forEach((sectionId) => {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        observer.observe(sectionElement);
+      }
     });
 
     // Clean up the observer on component unmount
     return () => {
       // Unobserve each section element
-      sections.forEach(sectionId => {
+      sections.forEach((sectionId) => {
         const sectionElement = document.getElementById(sectionId);
-        observer.unobserve(sectionElement);
+        if (sectionElement) {
+          observer.unobserve(sectionElement);
+        }
       });
 
       observer.disconnect();
@@ -159,17 +169,18 @@ export default function Home() {
             className='flex flex-row items-center my-2 gap-5 py-1 text-[#707070]'
             aria-label='Social media'
             >
-              <Link href='https://github.com/ipz06' className='hover:text-slate-200'>
+              <Link href='https://github.com/ipz06' target='_blank' className='hover:text-slate-200'>
                 <AiFillGithub size={20} />
               </Link>
-              <Link href='https://gitlab.com/ipz06' className='hover:text-slate-200'>
+              <Link href='https://gitlab.com/ipz06'  target='_blank' className='hover:text-slate-200'>
                 <AiFillGitlab size={20}/>
               </Link>
-              <Link href='https://www.linkedin.com/in/ivanka-zlateva-aa2258132/' className='hover:text-slate-200'>
+              <Link href='https://www.linkedin.com/in/ivanka-zlateva-aa2258132/'  target='_blank' className='hover:text-slate-200'>
                 <AiFillLinkedin size={20}/>              
               </Link>
               <Link 
               href='https://drive.google.com/file/d/1mKDlZfxhnUJEi01zRsSfBHgCHNLSAIMQ/view?usp=sharing'
+              target='_blank'
               >
                 <h1 className='font-bold text-l hover:text-slate-200'>CV</h1>
               </Link> 
@@ -195,6 +206,7 @@ export default function Home() {
             {/* <button>Dark/Light Mode</button> */}
             <Link
             href='https://tic-tac-toe-rho.vercel.app/'
+            target='_blank'
             className='hover:animate-spin  hover:text-[#3BBA9C]'>
               <TbTicTac size={30}/>
             </Link> 
