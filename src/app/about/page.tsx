@@ -18,6 +18,7 @@ export default function About () {
                 <p className="my-16 text-[#707070]">
                 As a former <Link 
                 href='https://issuu.com/vaniatodorova6/docs/portfolio_ivanka_todorova' 
+                target="_blank"
                 className="text-slate-200 hover:text-[#3BBA9C]"
                 data-tooltip-id="my-tooltip-arch"
                 data-tooltip-content="Some student work"
@@ -37,7 +38,8 @@ export default function About () {
                 When I am not at the computer, I am usually sporting,
                 hanging out with friends, or cooking. And love doing reading 
                 challenges at my <Link 
-                href='https://www.goodreads.com/' 
+                href='https://www.goodreads.com/'
+                target="_blank" 
                 className="text-slate-200 hover:text-[#3BBA9C] border-b-0 hover:border-b-2  hover:border-[#3BBA9C] transition-all"
                 data-tooltip-id="my-tooltip-arch"
                 data-tooltip-content="To my GoodReads profile"

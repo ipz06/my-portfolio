@@ -66,7 +66,8 @@ export default function Skills () {
             <h2 className="lg:text-xl font-bold tracking-tight text-[#d6d6d6] sm:text-xs lg:py-5 sm:py-3">CERTIFICATES</h2>
             <div className="flex flex-col text-[#d6d6d6] ">
                 <Link
-                href='https://drive.google.com/drive/folders/1eLymQubGk14iR5aaORzxIZ3lb4s1SX3q'>
+                href='https://drive.google.com/drive/folders/1eLymQubGk14iR5aaORzxIZ3lb4s1SX3q'
+                target='_blank'>
                     <div className={styles.base}>
                             <Image 
                             src='/c-1.png'

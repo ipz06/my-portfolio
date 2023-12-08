@@ -7,7 +7,8 @@ import { useRef, useState } from "react"
 // import { MdWavingHand } from "react-icons/md";
 import './form.css';
 import useInput from '../hooks/use-input';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react'; 
+import { useRouter } from 'next/navigation'
 
 type FormValues = {
     name: string,
@@ -20,10 +21,19 @@ export default function Page () {
 
     // const recaptchaRef = useRef<ReCAPTCHA>(null);
     // const [isVerified, setIsVerified] = useState<boolean>(false);
+    const router = useRouter();
 
     const [state, handleSubmit] = useForm("mleyqjag");
     if (state.succeeded) {
-        return <p className="text-slate-200">Thanks for joining!</p>;
+        return (
+            <div className="flex flex-col items-center">
+                <p className="text-slate-200">Thanks for writing me!</p>;
+                <button className="text-slate-200 transition duration-150 ease-out hover:ease-in hover:font-bold" onClick={() => router.back()}>BACK</button>
+
+            </div>
+            
+        )
+        
     }
     // const {register, handleSubmit} = useForm<FormValues>();
 
