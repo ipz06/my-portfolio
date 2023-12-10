@@ -128,7 +128,7 @@ export default function Home() {
 
   return (
     <div
-    className={`flex w-full font-sans min-h-screen mx-auto max-w-screen-xl bg-[#1E1F24] px-6 md:px-12 lg:px-24 lg:py-0 md:py-10`}
+    className={`flex w-full font-sans min-h-screen mx-auto max-w-screen-xl bg-[#1E1F24] md:px-12 lg:px-24 lg:py-0 md:py-10`}
     // ref={divRef}
     // ref={ref1}
     >
@@ -201,8 +201,8 @@ export default function Home() {
             </nav>
         </aside>
         </header>
-        <main className="pt-24 lg:w-1/2  bg-[#1E1F24] lg:py-20">
-          <div id='extra' className='flex flex-row lg:justify-center sm:justify-start gap-10 lg:px-20 pb-10 text-[#707070]'>
+        <main className="lg:pt-24 sm:pt-20 lg:w-1/2  bg-[#1E1F24] lg:py-20">
+          <div id='extra' className='flex flex-row lg:justify-center sm:justify-start sm:mr-10 gap-10 lg:px-20 pb-10 text-[#707070]'>
             {/* <button>Dark/Light Mode</button> */}
             <Link
             href='https://tic-tac-toe-rho.vercel.app/'

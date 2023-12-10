@@ -33,5 +33,7 @@ body {
   padding: 10px;
   font-family: 'Poppins', sans-serif;
   background: #1E1F24;
+  overflow-x: hidden;
+  width: 100%;
   
 }
