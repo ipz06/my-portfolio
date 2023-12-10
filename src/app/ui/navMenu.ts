@@ -6,27 +6,27 @@ type NavMenu = {
 export const navMenu: NavMenu[] = [
     {
         name: 'ABOUT' ,
-        ref: '#about'
+        ref: 'about'
     },
     {
         name:  'KNOWLEDGE',
-        ref: '#knowledge'
+        ref: 'knowledge'
     },
     {
         name: 'PROJECTS',
-        ref: '#projects'
+        ref: 'projects'
     },
     {
         name: 'EDUCATION AND EXPERIENCE',
-        ref: '#education'
+        ref: 'education'
     },
     {
         name: 'TESTIMONIALS' ,
-        ref: '#testimonials'
+        ref: 'testimonials'
     },
     {
         name: 'CONTACT' ,
-        ref: '#contact'
+        ref: 'contact'
     },
 
 ]; 

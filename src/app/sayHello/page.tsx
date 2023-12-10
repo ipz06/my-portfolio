@@ -27,7 +27,7 @@ export default function Page () {
     if (state.succeeded) {
         return (
             <div className="flex flex-col items-center">
-                <p className="text-slate-200">Thanks for writing me!</p>;
+                <p className="text-slate-200">Thanks for writing me!</p>
                 <button className="text-slate-200 transition duration-150 ease-out hover:ease-in hover:font-bold" onClick={() => router.back()}>BACK</button>
 
             </div>
