@@ -174,7 +174,7 @@ export default function Page () {
             <div className='form-row'>
                 <div className="input-data"> 
                     <ReCAPTCHA
-                        sitekey="6LdmzCwpAAAAALG45OmdiYsEVAvsIPV9qnc_ciZc"
+                        sitekey="6LeX1CwpAAAAANPae8EO93Zoaypi7UwbI_1mzazY"
                         ref={recaptchaRef}
                         onChange={handleCaptchaSubmission}
                     />
