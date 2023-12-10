@@ -1,6 +1,7 @@
 import {FaHome} from 'react-icons/fa';
 import { IoIosPhonePortrait } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+import Link from 'next/link';
 
 export default function Contact() {
 return (
@@ -24,12 +25,15 @@ return (
             
             <p>+359885293906</p>
         </div>
-        <div className='text-slate-100'>
+        <Link 
+        className='text-slate-100'
+        href="mailto:it.vania.9@gmail.com"
+        >
             <div className='p-2 pl-16'>
                 <MdEmail />
             </div> 
             <p>it.vania.9@gmail.com</p>
-        </div>      
+        </Link>      
     </div>
     </section>
     
