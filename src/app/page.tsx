@@ -11,14 +11,10 @@ import Link from 'next/link';
 import Projects from './projects/page';
 import { TbTicTac } from "react-icons/tb";
 import { BiMessageDetail } from "react-icons/bi";
-import { useState, useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import 'react-tooltip/dist/react-tooltip.css';
 
 import { Tooltip } from 'react-tooltip';
-
-
-
-
 
 export default function Home() {
 
@@ -37,9 +33,7 @@ export default function Home() {
 
       let intersectionFound = false;
 
-      console.log('ENTRIES', entries)
-
-      
+      // console.log('ENTRIES', entries)
 
       entries.forEach(entry => {
         if (intersectionFound) return;
@@ -149,7 +143,7 @@ export default function Home() {
             </nav>
         </aside>
         </header>
-        <main className="lg:pt-24 sm:pt-20 lg:w-1/2  bg-[#1E1F24] lg:py-20 sm:py-2">
+        <main className="lg:pt-24 sm:pt-20 lg:w-1/2  bg-[#1E1F24] lg:py-20 sm:py-2" >
           <div id='extra' className='flex flex-row lg:justify-center sm:justify-start sm:mr-10 gap-10 lg:px-20 lg:pb-10 sm:pb-4 text-[#707070]'>
             {/* <div className="letter-image">
               <div className="animated-mail">
