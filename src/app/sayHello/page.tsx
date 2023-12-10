@@ -6,7 +6,7 @@ import { useRef, useState } from "react"
 // import {SubmitHandler, useForm} from 'react-hook-form';
 // import { MdWavingHand } from "react-icons/md";
 import './form.css';
-import useInput from '../hooks/use-input';
+// import useInput from '../hooks/use-input';
 import { useForm, ValidationError } from '@formspree/react'; 
 import { useRouter } from 'next/navigation'
 
@@ -174,7 +174,7 @@ export default function Page () {
             <div className='form-row'>
                 <div className="input-data"> 
                     <ReCAPTCHA
-                        sitekey="6LfuzSApAAAAAOygPIS3m916ifu8qKi3yrynjrqo"
+                        sitekey="6LdmzCwpAAAAALG45OmdiYsEVAvsIPV9qnc_ciZc"
                         ref={recaptchaRef}
                         onChange={handleCaptchaSubmission}
                     />
