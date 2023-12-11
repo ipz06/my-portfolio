@@ -77,12 +77,24 @@ export default function Skills () {
                             objectFit='cover'
                             className='hover:scale-105 transition duration-500 cursor-pointer filter grayscale'
                             />
-                            <p className='mt-5'>Alpha JS Track - Telerik Academy</p>
-                        
-                        
+                            <p className='mt-5'>Alpha JS Track - Telerik Academy</p>    
                     </div>
                 </Link>
-                <p className={styles.base}>React-The complete guide</p>
+                <Link
+                href='https://drive.google.com/drive/folders/1eLymQubGk14iR5aaORzxIZ3lb4s1SX3q'
+                target='_blank'>
+                    <div className={styles.base}>
+                            <Image 
+                            src='/c-2.png'
+                            alt='Certificate-02'
+                            width={500}
+                            height={200} 
+                            objectFit='cover'
+                            className='hover:scale-105 transition duration-500 cursor-pointer filter grayscale'
+                            />
+                            <p className={styles.base}>React-The complete guide</p>
+                    </div>
+                </Link>
             </div>
         </section>
     )
