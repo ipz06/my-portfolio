@@ -122,9 +122,13 @@ export default function Home() {
                 <AiFillLinkedin size={20}/>              
               </Link>
               <Link 
-              href='https://drive.google.com/file/d/1mKDlZfxhnUJEi01zRsSfBHgCHNLSAIMQ/view?usp=sharing'
+              href='/sayHello'
               target='_blank'
+              data-tooltip-id="cv"
+              data-tooltip-content="If interested, write for CV!"
+              data-tooltip-place="right"
               >
+                <Tooltip id="cv" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
                 <h1 className='font-bold text-l hover:text-slate-200'>CV</h1>
               </Link> 
               
