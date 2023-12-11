@@ -92,7 +92,7 @@ export default function Skills () {
                             objectFit='cover'
                             className='hover:scale-105 transition duration-500 cursor-pointer filter grayscale'
                             />
-                            <p className={styles.base}>React-The complete guide</p>
+                            <p className='mt-5'>React-The complete guide</p>
                     </div>
                 </Link>
             </div>
