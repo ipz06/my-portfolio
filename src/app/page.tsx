@@ -15,6 +15,7 @@ import { useEffect } from 'react';
 import 'react-tooltip/dist/react-tooltip.css';
 
 import { Tooltip } from 'react-tooltip';
+import './animation.css';
 
 export default function Home() {
 
@@ -41,7 +42,7 @@ export default function Home() {
         
         const currentSection = sections.find(section => entry.target.id === section);
         const navElement = document.getElementById(`${currentSection}-nav`);
-        // const navElement = document.querySelector(`#${currentSection}-nav`);
+
         const navIndicator = navElement?.querySelector('.nav-indicator');
         const navText = navElement?.querySelector('.nav-text')
 
@@ -143,26 +144,36 @@ export default function Home() {
             </nav>
         </aside>
         </header>
-        <main className="lg:pt-24 sm:pt-20 lg:w-1/2  bg-[#1E1F24] lg:py-20 sm:py-2" >
-          <div id='extra' className='flex flex-row lg:justify-center sm:justify-start sm:mr-10 gap-10 lg:px-20 lg:pb-10 sm:pb-4 text-[#707070]'>
-            {/* <div className="letter-image">
-              <div className="animated-mail">
-                <div className="back-fold"></div>
-                <div className="letter">
-                  <div className="letter-border"></div>
-                  <div className="letter-title"></div>
-                  <div className="letter-context"></div>
-                  <div className="letter-stamp">
-                    <div className="letter-stamp-inner"></div>
+        <main className="lg:pt-20 sm:pt-20 lg:w-1/2  bg-[#1E1F24] lg:py-20 sm:py-2" >
+          <div id='extra' className='flex flex-row justify-center items-center pl-20 lg:pb-16 sm:pb-4 text-[#707070]'>
+          <Link 
+              href='/sayHello'
+              className=' hover:text-[#3BBA9C] z-0 relative' 
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Write me anything!"
+              data-tooltip-place="top"
+              >
+                <Tooltip id="my-tooltip" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
+
+              <div className="letter-image">
+                <div className="animated-mail">
+                  <div className="back-fold"></div>
+                  <div className="letter">
+                    <div className="letter-border"></div>
+                    <div className="letter-title"></div>
+                    <div className="letter-context"></div>
+                    <div className="letter-stamp">
+                      <div className="letter-stamp-inner"></div>
+                    </div>
                   </div>
+                  <div className="top-fold"></div>
+                  <div className="body"></div>
+                  <div className="left-fold"></div>
                 </div>
-                <div className="top-fold"></div>
-                <div className="body"></div>
-                <div className="left-fold"></div>
+                <div className="shadow"></div>
               </div>
-              <div className="shadow"></div>
-            </div> */}
-            <Link
+            </Link>
+            {/* <Link
             href='https://tic-tac-toe-rho.vercel.app/'
             target='_blank'
             className='hover:animate-spin  hover:text-[#3BBA9C]'>
@@ -179,7 +190,7 @@ export default function Home() {
                 <Tooltip id="my-tooltip" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
                 <BiMessageDetail size={30}/>
               </Link>
-            </span> 
+            </span>  */}
             
            
           </div>
@@ -189,13 +200,31 @@ export default function Home() {
           <Education />
           <Voice/>
           <Contact />
-          <footer className='max-w-md py-16 px-5 text-sm text-[#707070] sm:pb-0'>
-            <p>
-            {`All rights reserved © 2023 `}
-            </p>
-            <p>
-            Built with Next.js and Tailwind CSS, deployed with Vercel.
-            </p>
+          <footer className='max-w-md py-16 px-5 text-sm text-[#707070] sm:pb-0 '>
+            <div className='flex justify-between'>
+              <div>
+                <p>
+                {`All rights reserved © 2023 `}
+                </p>
+                <p>
+                Built with Next.js and Tailwind CSS,
+                <br/>deployed with Vercel.
+                </p>
+              </div>
+              <div className='animate-pulse  hover:text-[#3BBA9C] text-[#979797]'>
+                <Link
+                  href='https://tic-tac-toe-rho.vercel.app/'
+                  target='_blank'
+                  data-tooltip-id="play"
+                  data-tooltip-content="play"
+                  data-tooltip-place="top"
+                  >
+                    <Tooltip id="play" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
+                  <TbTicTac size={30}/>
+                </Link> 
+              </div>
+            </div>
+            
           </footer>
         </main>
       </div>
