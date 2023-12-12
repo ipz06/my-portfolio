@@ -47,7 +47,7 @@ export default function Home() {
         const navText = navElement?.querySelector('.nav-text')
 
         if (entry.isIntersecting) {
-          console.log(`nav: ${currentSection}`);
+          // console.log(`nav: ${currentSection}`);
           navIndicator?.classList.remove('w-8');
           navIndicator?.classList.add('w-16', 'bg-slate-200');
           navText?.classList.add('text-slate-200')
