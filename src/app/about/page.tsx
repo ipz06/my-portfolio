@@ -10,12 +10,12 @@ export default function About () {
                 <h2 className="text-[#3BBA9C] text-lg font-bold tracking-widest lg:sr-only">ABOUT</h2>
             </div>
             <div>
-                <p className="mb-4 text-[#707070]">
+                <p className="mb-4 text-[#9f9f9f]">
                 My coding and Web development journey begun when I decided to try my hand at creating web page for architecture. 
                 I started learning JavaScript and graduated Telerik Academy.  I was able to gain valuable experience with some <a href='#skills'>technologies </a> 
                 and was happy to develop alongside my peers in teams 3 different practical projects. 
                 </p>
-                <p className="my-16 text-[#707070]">
+                <p className="my-16 text-[#9f9f9f]">
                 As a former <Link 
                 href='https://issuu.com/vaniatodorova6/docs/portfolio_ivanka_todorova' 
                 target="_blank"
@@ -33,21 +33,21 @@ export default function About () {
                 My background in architecture has honed my attention to detail, project management skills, 
                 and ability to envision and execute complex designs.
                 </p>
-                <p className="my-16 text-[#707070]">
-                My main focus these days is building products in web development and continue learning. 
-                When I am not at the computer, I am usually sporting,
-                hanging out with friends, or cooking. And love doing reading 
-                challenges at my <Link 
+                <p className="my-16 text-[#9f9f9f]">
+                I'm currently dedicated to crafting web development products while constantly 
+                expanding my knowledge in the field. Away from the screen, you'll often find me
+                engaging in sports, socializing with friends, or exploring my culinary skills. 
+                I'm also passionate about participating in reading challenges on my <Link 
                 href='https://www.goodreads.com/'
                 target="_blank" 
                 className="text-slate-200 hover:text-[#3BBA9C] border-b-0 hover:border-b-2  hover:border-[#3BBA9C] transition-all"
                 data-tooltip-id="my-tooltip-arch"
-                data-tooltip-content="To my GoodReads profile"
+                data-tooltip-content="To my Goodreads profile"
                 data-tooltip-place="bottom"
                  >
                     <Tooltip id="my-tooltip-good" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
 
-                    goodreads</Link> profile. 
+                 Goodreads</Link> profile. 
                 </p>
             </div>
                 

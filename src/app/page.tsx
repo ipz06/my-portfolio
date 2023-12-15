@@ -224,7 +224,7 @@ export default function Home() {
                   data-tooltip-place="top"
                   >
                     <Tooltip id="play" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
-                  <TbTicTac size={30}/>
+                  <TbTicTac size={50}/>
                 </Link> 
               </div>
             </div>
