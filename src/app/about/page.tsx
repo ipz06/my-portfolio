@@ -34,10 +34,10 @@ export default function About () {
                 and ability to envision and execute complex designs.
                 </p>
                 <p className="my-16 text-[#9f9f9f]">
-                I'm currently dedicated to crafting web development products while constantly 
-                expanding my knowledge in the field. Away from the screen, you'll often find me
+                I`m currently dedicated to crafting web development products while constantly 
+                expanding my knowledge in the field. Away from the screen, you`ll often find me
                 engaging in sports, socializing with friends, or exploring my culinary skills. 
-                I'm also passionate about participating in reading challenges on my <Link 
+                I`m also passionate about participating in reading challenges on my <Link 
                 href='https://www.goodreads.com/'
                 target="_blank" 
                 className="text-slate-200 hover:text-[#3BBA9C] border-b-0 hover:border-b-2  hover:border-[#3BBA9C] transition-all"
