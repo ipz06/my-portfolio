@@ -13,14 +13,14 @@ return (
         <div className='flex flex-row justify-between m-1 p-3 gap-4 lg:text-base sm:text-sm sm:tracking-tighter lg:tracking-normal'>
         <div className='text-slate-100'>
             <div className='p-2'>
-                <FaHome />
+                <FaHome size={20}/>
             </div>
             
             <p>Sofia</p>
         </div>
         <div className='text-slate-100 '>
             <div className='p-2 pl-14'>
-                <IoIosPhonePortrait/>
+                <IoIosPhonePortrait size={20}/>
             </div>
             
             <p>+359885293906</p>
@@ -30,7 +30,7 @@ return (
         href="mailto:it.vania.9@gmail.com"
         >
             <div className='p-2 pl-16'>
-                <MdEmail />
+                <MdEmail size={20}/>
             </div> 
             <p>it.vania.9@gmail.com</p>
         </Link>      
