@@ -18,11 +18,12 @@ export default function Skills () {
                 <p className={styles.smallCard}>TypeScript</p>
                 <p className={styles.smallCard}>React</p>
                 <p className={styles.smallCard}>Redux</p>
-                <p className={styles.smallCard}>NextJS</p>
+                <p className={styles.smallCard}>NextJs</p>
+                <p className={styles.smallCard}>Vue</p>
                 <p className={styles.smallCard}>HTML</p>
                 <p className={styles.smallCard}>CSS</p>
-                <p className={styles.smallCard}>ChakraUI</p>
                 <p className={styles.smallCard}>TailwindCSS</p>
+                <p className={styles.smallCard}>ChakraUI</p>
                 <p className={styles.smallCard}>REST API</p>
                 <p className={styles.smallCard}>OOP</p>
                 <p className={styles.smallCard}>GIT</p>
