@@ -93,7 +93,7 @@ export default function Home() {
         <aside>  
           <div>
             <Image 
-            className='py-10'
+            className='py-10 hover:scale-110 transition duration-500'
             src='/profile.JPG'
             width={200}
             height={100}
