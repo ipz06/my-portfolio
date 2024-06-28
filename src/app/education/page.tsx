@@ -38,6 +38,18 @@ export default function Education () {
             <div className={style.card}>
                 <h3 className="font-bold text-[#d6d6d6] py-1">Frontend Developer</h3>
                 <div className='flex flex-row justify-between text-[#d6d6d6] py-1'>
+                    <span>Delasport</span >
+                    <span className='italic'>01.2024 - </span>
+                </div>
+                <ul className='text-[#d6d6d6]'>
+                    <li>- Create responsive layouts</li>
+                    <li>- Gain valuable experience with Vue.js, Vuex, Pinia </li>
+                    <li>- Strong experience with Sass/Scss and CSS </li>
+                </ul>
+            </div>
+            <div className={style.card}>
+                <h3 className="font-bold text-[#d6d6d6] py-1">Frontend Developer</h3>
+                <div className='flex flex-row justify-between text-[#d6d6d6] py-1'>
                     <span>Self-Employed</span >
                     <span className='italic'>06.2023 - </span>
                 </div>
