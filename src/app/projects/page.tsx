@@ -15,6 +15,28 @@ export default function Projects () {
             </div>
             <h1 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:pb-5 sr-only sm:not-sr-only">PROJECTS</h1>
             <Link
+            href='https://gitlab.com/ipz06/chuck-norris-vue3'         
+            >
+                <div className={style.card} >
+                    <div className={styles.example}>
+                        <h3 className="font-bold text-[#d6d6d6] py-1">Chuck Norris Jokes</h3>
+                    </div>
+                    <div className='flex flex-row justify-between text-[#d6d6d6]'>
+                        <span>Personal Project </span >
+                        <span className='italic'>01.2024 - 02.2024</span>
+                    </div>
+                    <h4 className="font-bold text-[#d6d6d6] py-1">Read new jokes</h4>
+                    <ul className='text-[#d6d6d6]'>
+                        <li>- Consume API and present the result as cards</li>
+                        <li>- You can select random jokes or by category</li>
+                        <li>- You can mark yor favorite joke and add it to your selection</li>
+                        <li>- You can remove it from favorites page and take a look of all of your chosen jokes</li>
+                    </ul>
+                    <h4 className="font-bold text-[#d6d6d6] py-1">Technologies:</h4>
+                    <span> Vue.js, Pinia, Sass, Bootstrap5, Vue Router</span>
+                </div>
+            </Link>
+            <Link
             href='https://gitlab.com/ipz06/learningtasks'         
             >
                 <div className={style.card} >
@@ -23,7 +45,7 @@ export default function Projects () {
                     </div>
                     <div className='flex flex-row justify-between text-[#d6d6d6]'>
                         <span>Personal Project </span >
-                        <span className='italic'>09.2023 - </span>
+                        <span className='italic'>09.2023 - 11.2023</span>
                     </div>
                     <h4 className="font-bold text-[#d6d6d6] py-1">Contains small projects from Udemy Course - React, Redux and NextJs. Includes:</h4>
                     <ul className='text-[#d6d6d6]'>
