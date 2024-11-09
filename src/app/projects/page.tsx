@@ -15,7 +15,7 @@ export default function Projects () {
             </div>
             <h1 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:pb-5 sr-only sm:not-sr-only">PROJECTS</h1>
             <Link
-            href='https://gitlab.com/ipz06/chuck-norris-vue3'         
+            href='https://chuck-jokes-beryl.vercel.app/'         
             >
                 <div className={style.card} >
                     <div className={styles.example}>
