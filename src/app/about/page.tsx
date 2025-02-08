@@ -11,9 +11,10 @@ export default function About () {
             </div>
             <div>
                 <p className="mb-4 text-[#9f9f9f]">
-                My coding and Web development journey begun when I decided to try my hand at creating web page for architecture. 
-                I started learning JavaScript and graduated Telerik Academy.  I was able to gain valuable experience with some <a href='#skills'>technologies </a> 
-                and was happy to develop alongside my peers in teams 3 different practical projects. 
+                My journey into coding and web development began when I decided to create a web page for an architectural project.  
+                This curiosity led me to learn JavaScript and graduate from Telerik Academy, where I gained hands-on experience 
+                with various <a href='#skills'>technologies </a> 
+                and collaborated on different practical projects as part of a team. 
                 </p>
                 <p className="my-16 text-[#9f9f9f]">
                 As a former <Link 
@@ -28,16 +29,13 @@ export default function About () {
                     <Tooltip id="my-tooltip-arch" arrowColor='#707070' style={{ backgroundColor: "#707070", color: "white" }}/>
                     architect </Link> 
                 
-                 with a passion for precision and creative problem-solving, 
-                I am now embarking on an exciting journey into the world of JavaScript development. 
-                My background in architecture has honed my attention to detail, project management skills, 
-                and ability to envision and execute complex designs.
+                    I have a strong foundation in precision, problem-solving, and creative design. Transitioning into JavaScript development, 
+                    I bring with me a keen eye for detail, project management skills, and the ability to conceptualize and execute complex ideas.
                 </p>
                 <p className="my-16 text-[#9f9f9f]">
-                I`m currently dedicated to crafting web development products while constantly 
-                expanding my knowledge in the field. Away from the screen, you`ll often find me
-                engaging in sports, socializing with friends, or exploring my culinary skills. 
-                I`m also passionate about participating in reading challenges on my <Link 
+                I am currently focused on crafting high-quality web applications while continuously expanding my knowledge in the field.  
+                When I am not coding, you will find me staying active through sports, spending time with friends, or experimenting in the kitchen.  
+                I also love taking on reading challenges on my   <Link 
                 href='https://www.goodreads.com/'
                 target="_blank" 
                 className="text-slate-200 hover:text-[#3BBA9C] border-b-0 hover:border-b-2  hover:border-[#3BBA9C] transition-all"

@@ -15,6 +15,29 @@ export default function Projects () {
             </div>
             <h1 className="text-3xl font-bold tracking-widest text-[#3BBA9C] py-5 lg:pb-5 sr-only sm:not-sr-only">PROJECTS</h1>
             <Link
+            href='https://product-list-azure-eta.vercel.app/'         
+            >
+                <div className={style.card} >
+                    <div className={styles.example}>
+                        <h3 className="font-bold text-[#d6d6d6] py-1">Product List with Cart</h3>
+                    </div>
+                    <div className='flex flex-row justify-between text-[#d6d6d6]'>
+                        <span>Personal Project </span >
+                        <span className='italic'>01.2025 - 02.2025</span>
+                    </div>
+                    <h4 className="font-bold text-[#d6d6d6] py-1">Responsive Product List</h4>
+                    <ul className='text-[#d6d6d6]'>
+                        <li>- Consume API and display the results as cards</li>
+                        <li>- Select items, add them to the cart, or remove them</li>
+                        <li>- Increase or decrease the number of selected items</li>
+                        <li>- Review the selection in the confirmation modal</li>
+                        <li>- Ensure responsiveness across different devices</li>
+                    </ul>
+                    <h4 className="font-bold text-[#d6d6d6] py-1">Technologies:</h4>
+                    <span> Vue.js, Pinia, Sass, Bootstrap5, Vue Router</span>
+                </div>
+            </Link>
+            <Link
             href='https://chuck-jokes-beryl.vercel.app/'         
             >
                 <div className={style.card} >
