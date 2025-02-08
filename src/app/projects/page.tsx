@@ -34,7 +34,7 @@ export default function Projects () {
                         <li>- Ensure responsiveness across different devices</li>
                     </ul>
                     <h4 className="font-bold text-[#d6d6d6] py-1">Technologies:</h4>
-                    <span> Vue.js, Pinia, Sass, Bootstrap5, Vue Router</span>
+                    <span> Vue.js, Typescript, Pinia, SCSS, Tailwind, HTML5</span>
                 </div>
             </Link>
             <Link
